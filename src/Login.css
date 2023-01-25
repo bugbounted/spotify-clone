@@ -31,8 +31,7 @@
 
 .text{
     color: white;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
     padding-bottom: 5rem;
     opacity: 0.5;
 }
