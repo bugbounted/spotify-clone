@@ -1,12 +1,17 @@
 import React from "react";
-import { useUserContext } from "./SessionProvider";
+import { useUserContext } from "./StateProvider";
+
 
 function Home(props) {
-  const UserContext = useUserContext();
+  const [{ user }, dispatch] = useUserContext(); 
+
     
   return (
     <div>
-      <div>hello {UserContext.user.display_name}</div>
+      
+        <div>hello </div>
+      
+      
     </div>
   );
 }
