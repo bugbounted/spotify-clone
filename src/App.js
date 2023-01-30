@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
+import React, { useEffect} from "react";
+import "./styles/App.css";
 import Login from "./Login";
 import Home from "./Home";
 import { getTokenFromUrl } from "./Spotify";
@@ -10,9 +10,8 @@ import  SpotifyWebApi  from "spotify-web-api-js";
 
 
 function App() {
-  const [token, setToken] = useState(null);
   const spotify = new SpotifyWebApi(); //spotify api
-  const [{ user }, dispatch] = useUserContext(); 
+  const [{ user , token}, dispatch] = useUserContext(); 
 
   useEffect(() => {
     //useEffect se ejecuta cuando se renderiza el componente
@@ -25,7 +24,7 @@ function App() {
         type: "SET_TOKEN",
         token: _token,
       });
-      setToken(_token); //actualiza el estado de token
+
       spotify.setAccessToken(_token); //actualiza el estado de spotify  
       spotify.getMe().then((user) => {
         dispatch({
@@ -41,7 +40,7 @@ function App() {
 
   return (
     <div className="app">
-      {token ? <Home token={token} /> : <Login />}
+      {token ? <Home spotify={spotify} /> : <Login />}
     </div>);
 }
 

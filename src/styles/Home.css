@@ -1,0 +1,8 @@
+.main{
+    display:flex;
+    flex-direction:column;
+}
+.main_body{
+    display:flex;
+    flex-direction:row;
+}
