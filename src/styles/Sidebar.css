@@ -1,4 +1,32 @@
 .main_sidebar{
-    width: 20vw;
-    background-color: aqua;
+    width:12.7rem;
+    background-color: #000;
+    color: #F8F9FA;
+    padding:1.5rem;
+}
+.logoSidebar{
+    width:8rem;
+    padding-top:0.5rem;
+}
+.sidebarOption{
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+.item{
+    display:flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    color: #b3b3b3;
+}
+
+.icon{
+    padding-right:0.8rem;
+}
+.theme{
+    display:flex;
+    align-items: center;
+}
+hr{
+    border:0;
+    border-top: 1px solid #232323;
 }

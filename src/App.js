@@ -31,6 +31,7 @@ function App() {
           type: "SET_USER",
           user: user,
         });
+        console.log(user)
       });
     }
   }, []);
