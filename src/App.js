@@ -4,22 +4,21 @@ import Login from "./Login";
 import Home from "./Home";
 import { getTokenFromUrl } from "./Spotify";
 import {useUserContext } from "./StateProvider";
-import  SpotifyWebApi  from "spotify-web-api-js";
+import  SpotifyWebApi  from "spotify-web-api-js";  /* https://github.com/thelinmichael/spotify-web-api-node#development */
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 
  /* https://developer.spotify.com/documentation/web-playback-sdk/guide/#prerequisites */
 
 
 function App() {
-  const spotify = new SpotifyWebApi(); //spotify api
-  const [{ user , token}, dispatch] = useUserContext(); 
+  const spotify = new SpotifyWebApi(); //objeto
+  const [{ user , token }, dispatch] = useUserContext(); 
 
   useEffect(() => {
     //useEffect se ejecuta cuando se renderiza el componente
-    const _token = getTokenFromUrl.access_token;
-       // reducer hook 
+    const _token = getTokenFromUrl.access_token;// reducer hook 
     
-    if (_token) {
-      //si _token es diferente de null
+    if (_token) { //si _token es diferente de null
       dispatch({
         type: "SET_TOKEN",
         token: _token,
@@ -39,10 +38,14 @@ function App() {
   console.log({user})
   console.log("token", token);
 
+  const queryClient = new QueryClient()
+
   return (
-    <div className="app">
-      {token ? <Home spotify={spotify} /> : <Login />}
-    </div>);
+      <QueryClientProvider className="app" client={queryClient}>
+        {token ? <Home spotify={spotify} /> : <Login />}
+     </QueryClientProvider>
+  );
+
 }
 
 export default App;

@@ -11,6 +11,11 @@ const scopes = [
   "user-modify-playback-state",
 ];
 
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+  "%20"
+)}&response_type=token&show_dialog=true`;
+
+
 export let getTokenFromUrl = window.location.hash.substring(1).split("&").reduce(
     function(initial, item) {
         if (item) {
@@ -22,6 +27,3 @@ export let getTokenFromUrl = window.location.hash.substring(1).split("&").reduce
 
 
 
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-  "%20"
-)}&response_type=token&show_dialog=true`;
