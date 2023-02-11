@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../styles/Sidebar.css'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -24,8 +24,8 @@ function Sidebar() {
           <LibraryMusicIcon className='icon'/>
           <h5 className='theme'>Tu biblioteca</h5>
         </div>
+        <hr></hr>
       </div>
-      <hr></hr>
       <Playlists/>
     </div>
 

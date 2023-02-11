@@ -1,12 +1,10 @@
 import React from "react";
-import { useUserContext } from "./StateProvider";
 import Sidebar from "./home_components/Sidebar";
 import Body from "./home_components/Body";
 import Footer from "./home_components/Footer";
 import "./styles/Home.css";
 
 function Home({ spotify }) {
-  const [{ user }, dispatch] = useUserContext();
 
   return (
     <div className="main">

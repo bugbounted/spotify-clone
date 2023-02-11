@@ -1,5 +1,5 @@
 .main_sidebar{
-    width:16.5rem;
+    width:14.5rem;
     background-color: #000;
     color: #F8F9FA;
 }
@@ -34,10 +34,11 @@
 }
 hr{
     border:0;
-    border-top: 1px solid #232323;
+    border-bottom: 1px solid #232323;
+    padding-top:1rem;
 }
 .main_sidebar .list{
-    max-height: calc(100vh - 20rem);
+    max-height: calc(100vh - 22rem);
     overflow-y: hidden;
 }
 .main_sidebar .list::-webkit-scrollbar{
@@ -52,5 +53,9 @@ hr{
 .main_sidebar .list:hover{
     overflow-y:scroll;
 }
-
+.itemplaylist{
+    padding: 0.4rem;
+    padding-left: 2rem;
+    font-size: 14px;
+}
 

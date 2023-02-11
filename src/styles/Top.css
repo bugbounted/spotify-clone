@@ -1,0 +1,12 @@
+.main_top{
+    padding-left:2rem;
+    display:flex;
+    flex-direction: row;
+    padding-top: 4rem;
+}
+
+.playlist_img{
+    width: 15rem;
+    height: 15rem;
+    margin-right: 1rem;
+}

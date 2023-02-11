@@ -5,14 +5,14 @@ import Home from "./Home";
 import { getTokenFromUrl } from "./Spotify";
 import {useUserContext } from "./StateProvider";
 import  SpotifyWebApi  from "spotify-web-api-js";  /* https://github.com/thelinmichael/spotify-web-api-node#development */
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
  /* https://developer.spotify.com/documentation/web-playback-sdk/guide/#prerequisites */
 
 
 function App() {
   const spotify = new SpotifyWebApi(); //objeto
-  const [{ user , token }, dispatch] = useUserContext(); 
+  const [{ token }, dispatch] = useUserContext(); 
 
   useEffect(() => {
     //useEffect se ejecuta cuando se renderiza el componente
@@ -35,8 +35,6 @@ function App() {
     }
   }, []);
 
-  console.log({user})
-  console.log("token", token);
 
   const queryClient = new QueryClient()
 
