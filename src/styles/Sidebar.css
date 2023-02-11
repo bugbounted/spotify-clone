@@ -1,16 +1,19 @@
 .main_sidebar{
-    width:12.7rem;
+    width:16.5rem;
     background-color: #000;
     color: #F8F9FA;
-    padding:1.5rem;
 }
-.logoSidebar{
+.main_sidebar .logoSidebar{
     width:8rem;
     padding-top:0.5rem;
+    padding: 1.5rem;
+    padding-bottom: 0rem;
 }
 .sidebarOption{
     padding-top:1rem;
     padding-bottom:1rem;
+    flex: 0 1 30px;
+    padding: 1.5rem;
 }
 .item{
     display:flex;
@@ -25,8 +28,29 @@
 .theme{
     display:flex;
     align-items: center;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+
 }
 hr{
     border:0;
     border-top: 1px solid #232323;
 }
+.main_sidebar .list{
+    max-height: calc(100vh - 20rem);
+    overflow-y: hidden;
+}
+.main_sidebar .list::-webkit-scrollbar{
+    width: 0.9rem;
+}
+.main_sidebar .list::-webkit-scrollbar-thumb{
+    background-color: #2E2E2E;
+}
+.main_sidebar .list::-webkit-scrollbar-thumb:hover{
+    background-color: #7b7b7b;
+}
+.main_sidebar .list:hover{
+    overflow-y:scroll;
+}
+
+

@@ -9,6 +9,8 @@ import {
   } from 'react-query'
 import axios from 'axios'
 import {useUserContext } from "../StateProvider";
+import '../styles/Sidebar.css'
+
 
 
 function Playlists() {
@@ -42,14 +44,14 @@ function Playlists() {
     }
 
   return (
-    <div>
+    <div className="list">
         {data && data.items.map((playlist) => {
-            return(
-                <div key={playlist.id}>
-                    <h3>{playlist.name}</h3>
-                </div>
-            )
-        })
+                    return(
+                        <div className="item" key={playlist.id}>
+                            <p className='theme'>{playlist.name}</p>
+                        </div>
+                    )
+                })
         }
     </div>
   )

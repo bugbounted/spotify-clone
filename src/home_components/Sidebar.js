@@ -14,7 +14,7 @@ function Sidebar() {
       <div className='sidebarOption'>
         <div className="item">
           <HomeOutlinedIcon className='icon'/>          
-          <h5 className='theme'>token</h5>
+          <h5 className='theme'>Home</h5>
         </div>
         <div className="item">
           <SearchOutlinedIcon className='icon'/>
