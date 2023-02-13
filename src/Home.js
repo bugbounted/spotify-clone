@@ -8,11 +8,11 @@ function Home({ spotify }) {
 
   return (
     <div className="main">
-      <div className="main_body">
+      <div className="main_">
         <Sidebar /> {/* etiqueta siempre tiene que ir con primera letra mayuscula */}
         <Body/>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

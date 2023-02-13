@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import '../styles/Body.css'
 import { useUserContext } from "../StateProvider";
 import Top from './Top';
+import Bottom from './Bottom';
 
 
 function Body() {
@@ -15,7 +16,8 @@ function Body() {
 
   return (
     <div className='main_body'>
-      <Top/>
+      <Top className="top"/>
+      <Bottom className="bottom"/>
     </div>
   )
 }

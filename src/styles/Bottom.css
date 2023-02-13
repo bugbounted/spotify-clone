@@ -1,0 +1,12 @@
+.main_bottom{
+    display:flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    background-color: #00000034;
+    color: #F8F9FA;
+    max-height: calc(100vh - 30rem);
+    overflow-y: auto;
+}
